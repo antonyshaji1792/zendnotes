@@ -1,0 +1,36 @@
+$QUERY = Tome::DB()->select()->from('cms',array('*'))->where('PageName ="Checkout"  and  language ="'.$language.'"')->order("CMSID DESC");
+
+Classname::DB()->select()->from('TABLENAME',array('*'))->where('VARIABLE ="VALUE"  and  VARIABLE ="'.$PHPVALUE.'"')->order("VARIABLE DESC");
+
+  $QUERYRESULT = Tome::DB()->fetchAll($QUERY);
+
+PRINT AND CHECK THE FORMAT
+
+		   foreach($QUERYRESULT as $QUERYRESULTVALUE)
+		   {   
+		  $this->view->VIEWVARIABLE=$fetch['COLUMNNAME1'];
+		  $this->view->VIEWVARIABLE=$fetch['COLUMNNAME1'];
+		  $this->view->VIEWVARIABLE=$fetch['COLUMNNAME1'];	
+		   } 
+       
+       		$max_cost_sql = Tome::DB()->select()->from('parameter',array('Value'))->where('Name="max_per_word_cost"');
+          
+          
+          		$max_cost_sql = Tome::DB()->select()->from('TABLENAME',array('REQUERYVALUE'))->where('COLUMNNAME="COMPAREVALUE"');
+              		$rscsql = Tome::DB()->fetchRow($max_cost_sql);
+                  
+  JOIN ARRAY
+  
+  		$chance_sql = $this->db2->select()->from(array('st' => 'servicetype'),
+													array(''))
+												->join(array('q' => 'quoteparameters'),
+												'q.ServiceTypeID = st.ServiceTypeID and q.ServiceID="'.$service_array[0].'"',
+												array('Steps','Ranges','Value'))
+												->where('st.ServiceTypeParameterName="Chance Percentage"');
+                        
+                        		$chance_qry = $this->db2->fetchAll($chance_sql);
+  
+=====================
+
+
+
