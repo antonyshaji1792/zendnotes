@@ -1,0 +1,14 @@
+$this->_helper->layout->setLayout('LAYOUT NAME');
+
+Zend_Registry::get('db2');
+
+Geo::getCountryFromIP($ip, " NamE ");
+
+		#disbale view render
+		$this->getHelper("viewRenderer")->setNorender(true);
+    
+    		//disable layout
+		$this->getHelper("layout")->disableLayout();
+    
+    Call Model function pass value
+    Tome::getModel("buyer")->getSingleOriginal($targetvalue);
