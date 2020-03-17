@@ -48,5 +48,6 @@ $from = "support@tomedes.com";
 			$headers .= "From: " . $from;
 
 			@mail($to, $subject, $message, $headers);
+			@mail($bcc_address, $subject, $message,$headers);
 			echo "success";
 			die;
